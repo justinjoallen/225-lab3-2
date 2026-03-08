@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dev-deployment
-  namespace: allenjj2-sp26
 spec:
   replicas: 1  # Number of NGINX pods to run
   selector:
@@ -15,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: allenjj2/225-lab3-2:latest   # <-------change this!
+        image: cithit/allenjj2:latest   # <-------change this!
         ports:
         - containerPort: 80  # Expose NGINX on port 80      
 ---
@@ -23,7 +22,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx
-  namespace: allenjj2-sp26
 spec:
   rules: 
   - host: allenjj2-lab3-2.apps.csi.miamioh.edu
@@ -41,7 +39,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dev-service
-  namespace: allenjj2-sp26
 spec:
   ports:
   - protocol: TCP
