@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: cithit/allenjj2:latest   # <-------change this!
+        image: allenjj2/225-lab3-2:latest   # <-------change this!
         ports:
         - containerPort: 80  # Expose NGINX on port 80      
 ---
@@ -24,7 +24,7 @@ metadata:
   name: nginx
 spec:
   rules: 
-  - host: 
+  - host: allenjj2-lab3-2.apps.csi.miamioh.edu
     http:
       paths:
       - path: /
