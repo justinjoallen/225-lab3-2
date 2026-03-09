@@ -24,7 +24,7 @@ metadata:
   name: nginx
 spec:
   rules: 
-  - host: allenjj2-lab3-2.apps.csi.miamioh.edu
+  - host:
     http:
       paths:
       - path: /
